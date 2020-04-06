@@ -1,9 +1,22 @@
-<app-header></app-header>
+<style>
+    .card {
+        padding: 1em;
+        margin: 1em;
+    }
+</style>
+
+<app-header [navbarTitle]="title"></app-header>
 
 <div class="container">
-    <h1>customers component</h1>
-    <app-customers></app-customers>
+    
+    <div class="card">
+        <app-customers></app-customers>
+    </div>
+    
+    <div class="card">
+        <app-users></app-users>
+    </div>
+    
 </div>
-
 <!-- <app-footer></app-footer> -->
 

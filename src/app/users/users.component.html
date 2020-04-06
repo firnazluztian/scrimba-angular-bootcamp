@@ -1,0 +1,31 @@
+<p>users table</p>
+
+<table class="table table-hover">
+
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>username</th>
+            <th>email</th>
+            <th>password</th>
+        </tr>
+    </thead>
+
+    <tr *ngFor="let item of usersData">
+        <td>
+            <a>
+                {{ item._id }}
+            </a>
+        </td>
+        <td>{{ item.username }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.password }}</td>
+    </tr>
+    
+    <tr *ngIf="!usersData">
+        <td colspan="4">No users found</td>
+    </tr>
+
+</table>
+
+<p *ngIf="usersData">Number of users: {{ usersData.length }}</p>

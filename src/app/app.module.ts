@@ -1,10 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
 
-import { AppComponent } from './app.component';
-import { CustomersModule } from './customers/customers.module';
-// import { FooterComponent } from './shared/layout/footer.component';
-// import { HeaderComponent } from './shared/layout/header.component';
+import { AppComponent } from './app.component'
+import { CustomersModule } from './customers/customers.module'
+import { UsersModule } from './users/users.module'
+
+import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module'
 
 @NgModule({
@@ -14,7 +15,9 @@ import { SharedModule } from './shared/shared.module'
   imports: [
     BrowserModule,
     CustomersModule,
-    SharedModule
+    UsersModule,
+    SharedModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
